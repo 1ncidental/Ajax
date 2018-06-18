@@ -515,30 +515,19 @@
         $(document).ready(function () {
 
             c3.generate({
-			chart.load({
-                bindto: '#lineChart',
-               	url: "http://206.189.200.105:1880/live",
-				mimeType: 'json',
-				keys: {
-					x: 'name',
-					value: ['temps']
-          }
-                    
-                
-            });
-
-            c3.generate({
                 bindto: '#lineChart',
                 data: {
 					url: "http://206.189.200.105:1880/live",
-					mimeType: 'json'.
+					mimeType: 'json',
 					keys: {
 						x: 'name',
 						value: 'temps'
-          }}
-                    
+						}
+                },    
                 
             });
+
+
 
             c3.generate({
                 bindto: '#scatter',
