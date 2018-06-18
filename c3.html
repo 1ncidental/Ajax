@@ -521,7 +521,7 @@ var chart = c3.generate({
         text:'External JSON loading via C3.js'
     },
     bindto: '#lineChart',
-    data1a: {
+    data: {
        json: externaldata,
         type: 'line',
 
@@ -532,7 +532,7 @@ setInterval(function(){
     chart.flow({
         columns:
                 [
-                    ['data1a',Math.round(Math.random()*200)]
+                    ['temps']
                 ],
         type:'line'
     })
