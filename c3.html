@@ -514,7 +514,8 @@
 
         $(document).ready(function () {
 
-            chart.load({
+            c3.generate({
+			chart.load({
                 bindto: '#lineChart',
                	url: "http://206.189.200.105:1880/live",
 				mimeType: 'json',
@@ -527,18 +528,16 @@
             });
 
             c3.generate({
-                bindto: '#slineChart',
-                data:{
-                    columns: [
-                        ['data1', 30, 200, 100, 400, 150, 250],
-                        ['data2', 130, 100, 140, 200, 150, 50]
-                    ],
-                    colors:{
-                        data1: '#1ab394',
-                        data2: '#BABABA'
-                    },
-                    type: 'spline'
-                }
+                bindto: '#lineChart',
+                data: {
+					url: "http://206.189.200.105:1880/live",
+					mimeType: 'json'.
+					keys: {
+						x: 'name',
+						value: 'temps'
+          }}
+                    
+                
             });
 
             c3.generate({
