@@ -523,6 +523,11 @@
 					
                  
             });
+		   setTimeout(function () {
+			chart.load({
+			url: 'http://206.189.200.105:1880/live',
+			});
+			}, 1000);
 
             c3.generate({
                 bindto: '#slineChart',
