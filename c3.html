@@ -525,7 +525,16 @@ var chart = c3.generate({
        json: externaldata,
         type: 'line',
 
+    },
+	    keys: {
+      x: 'name', // it's possible to specify 'x' when category axis
+      value: ['temps'],
+    },
+    axis: {
+    x: {
+      type: 'category'
     }
+  }
 })
 
 setInterval(function(){
