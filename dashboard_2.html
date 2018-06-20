@@ -1210,7 +1210,11 @@
     <script>
         $(document).ready(function() {
 	setInterval(function(){
-$( "#T09-Temp" ).load( "http://206.189.200.105:1880/test" );
+$( "#T09-Temp" ).load( "http://206.189.200.105:1880/SF1-T09" ),
+$( "#T10-Temp" ).load( "http://206.189.200.105:1880/SF1-T10" ),
+$( "#T11-Temp" ).load( "http://206.189.200.105:1880/SF1-T11" ),
+$( "#T12-Temp" ).load( "http://206.189.200.105:1880/SF1-T12" ),
+$( "#T13-Temp" ).load( "http://206.189.200.105:1880/SF1-T13" );
 }, 10000);
             $('.chart').easyPieChart({
                 barColor: '#f8ac59',
