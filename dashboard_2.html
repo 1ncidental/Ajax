@@ -439,9 +439,8 @@
                             <div class="ibox-content">
                                 <div class="row">
                                 <div class="col-lg-9">
-                                    <div class="flot-chart">
-                                        <div class="flot-chart-content" id="flot-dashboard-chart"></div>
-                                    </div>
+                                         <div id="lineChart"></div>
+                                    <
                                 </div>
                                 <div class="col-lg-3">
                                     <ul class="stat-list">
@@ -1216,6 +1215,23 @@ $( "#T11-Temp" ).load( "http://206.189.200.105:1880/SF1-T11" ),
 $( "#T12-Temp" ).load( "http://206.189.200.105:1880/SF1-T12" ),
 $( "#T13-Temp" ).load( "http://206.189.200.105:1880/SF1-T13" );
 }, 10000);
+
+        var chart = c3.generate({
+                bindto: '#lineChart',
+                 data: {
+					url: 'http://206.189.200.105:1880/SF1',
+					mimeType: 'json'
+						}
+					                 
+            });
+		   setInterval(function () {
+			chart.load({
+				url: 'http://206.189.200.105:1880/SF1',
+				mimeType: 'json'
+				});
+			}, 1000);
+			
+			
             $('.chart').easyPieChart({
                 barColor: '#f8ac59',
 //                scaleColor: false,
