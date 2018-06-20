@@ -917,8 +917,9 @@ $( "#T13-Temp" ).load( "http://206.189.200.105:1880/SF1-T13" );
 			chart.flow({
 				url: 'http://206.189.200.105:1880/SF1',
 				mimeType: 'json'
-				});
-			duration: 1000);
+				}),
+				duration: 1500;
+			}, 1000);
 			
 			
             $('.chart').easyPieChart({
